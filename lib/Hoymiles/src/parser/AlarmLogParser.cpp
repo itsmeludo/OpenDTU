@@ -34,6 +34,7 @@ const std::array<const AlarmMessage_t, ALARM_MSG_COUNT> AlarmLogParser::_alarmMe
     { AlarmMessageType_t::ALL, 2, "Time calibration", "Zeitabgleich", "" },
     { AlarmMessageType_t::ALL, 3, "EEPROM reading and writing error during operation", "", "" },
     { AlarmMessageType_t::ALL, 4, "Offline", "Offline", "Non connecté" },
+    { AlarmMessageType_t::ALL, 5, "Internal communication error (SCI , DSP-radio link)", "Interner Kommunikationsfehler (SCI, DSP-Funkmodul)", "Erreur de communication interne (SCI, liaison DSP-module radio)" },
 
     { AlarmMessageType_t::ALL, 11, "Grid voltage surge", "Netz: Überspannungsimpuls", "" },
     { AlarmMessageType_t::ALL, 12, "Grid voltage sharp drop", "Netz: Spannungseinbruch", "" },
