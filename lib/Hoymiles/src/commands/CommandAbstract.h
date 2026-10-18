@@ -69,12 +69,20 @@ public:
     // received so far is accepted as the complete answer.
     bool acceptsSingleFragmentAnswer() const { return _singleFragmentAnswer; }
 
+    void setFrequency(const uint32_t frequency) { _frequency = frequency; }
+    uint32_t getFrequency() const { return _frequency; }
+
+    virtual bool usesBootFrequency() const { return false; }
+
+    InverterAbstract* getInverter() const { return _inv; }
+
 protected:
     uint8_t _payload[RF_LEN];
     uint8_t _payload_size;
     bool _singleFragmentAnswer;
     uint32_t _timeout;
     uint8_t _sendCount;
+    uint32_t _frequency = 0;
 
     uint64_t _targetAddress;
     uint64_t _routerAddress;
